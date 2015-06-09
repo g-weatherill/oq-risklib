@@ -279,7 +279,7 @@ class TaskManager(object):
         task_func = getattr(task, 'task_func', task)
         if acc is None:
             acc = AccumDict()
-        if not arg0:
+        if not len(arg0):
             return acc
         elif len(arg0) == 1:
             return agg(acc, task_func(arg0, *args))
